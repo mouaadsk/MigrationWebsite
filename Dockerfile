@@ -1,7 +1,5 @@
 FROM python:latest
+FROM wordpress:latest
 
 
-COPY main.py / 
-
-
-CMD ["python" , "./main.py"]
+COPY . /var/www/html

@@ -1,0 +1,10 @@
+.ekit-wid-con ul.ekit-dropdown-menu.ekit-dropdown-menu-mini-cart {
+    display: none;
+}
+
+.ekit-wid-con a.ekit-dropdown-back:active,
+.ekit-wid-con a.ekit-dropdown-back:focus,
+.ekit-wid-con a.ekit-dropdown-back:hover,
+.ekit-wid-con a.ekit-dropdown-back:visited{
+    color: black;
+}

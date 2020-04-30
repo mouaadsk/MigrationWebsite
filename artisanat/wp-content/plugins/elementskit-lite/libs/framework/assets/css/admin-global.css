@@ -1,0 +1,84 @@
+
+@keyframes Gradient {
+	0%,
+	100% {
+		background-position: 0 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+}
+
+a.toplevel_page_elementskit {
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB)!important;
+	animation: Gradient 15s ease infinite;
+	background-size: 400% 400%!important;
+	color: #fff!important;
+}
+#adminmenu .toplevel_page_elementskit .wp-menu-image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+#adminmenu .toplevel_page_elementskit .wp-menu-image img {
+    opacity: 1;
+    width: 16px!important;
+    padding: 0px!important;
+}
+
+#elementskit-sites-notice-id-elementskit-go-pro p{
+    font-size: 16px;
+    font-weight: 300;
+}
+#elementskit-sites-notice-id-elementskit-go-pro h2{
+    font-size: 28px;
+	font-weight: 400;
+	margin: 0 0 16px 0;
+}
+#elementskit-sites-notice-id-elementskit-go-pro{
+ background: none;
+ position: relative;
+}
+#elementskit-sites-notice-id-elementskit-go-pro:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 380px;
+    z-index: -1;
+    top: 0;
+    background: #f9fafc;
+    background: linear-gradient(90deg, rgb(255, 227, 227) 0%, rgba(249,250,252,.5) 100%);
+}
+#elementskit-sites-notice-id-elementskit-go-pro:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -2;
+    top: 0;
+    background: #f9fafc url(../images/go-pro-feature.png) no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+#elementskit-sites-notice-id-elementskit-go-pro .button-primary {
+    background: #f2295b;
+    border-color: #f22930 #f22945 #f22945;
+    box-shadow: 0 1px 0 #f22945;
+    color: #fff;
+    text-decoration: none;
+	text-shadow: 0 -1px 1px #f22945, 1px 0 1px #f22945, 0 1px 1px #f22945, -1px 0 1px #f22945;
+
+    padding: 0 24px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 16px;
+}

@@ -1,0 +1,84 @@
+/*!
+ * Variation Swatches for WooCommerce v1.0.80 
+ * 
+ * Author: Emran Ahmed ( emran.bd.08@gmail.com ) 
+ * Date: 4/2/2020, 11:47:32 PM
+ * Released under the GPLv3 license.
+ */
+.variable-items-wrapper [data-wvstooltip],
+.variable-items-wrapper .wvs-has-image-tooltip {
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.variable-items-wrapper [data-wvstooltip]:before,
+.variable-items-wrapper [data-wvstooltip]:after,
+.variable-items-wrapper .wvs-has-image-tooltip:before,
+.variable-items-wrapper .wvs-has-image-tooltip:after {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  box-sizing: inherit;
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  z-index: 999;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.3);
+  -webkit-transition: opacity 300ms linear, bottom 300ms linear;
+  transition: opacity 300ms linear, bottom 300ms linear;
+}
+
+.variable-items-wrapper [data-wvstooltip]:before,
+.variable-items-wrapper .wvs-has-image-tooltip:before {
+  margin-bottom: 5px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 7px;
+  border-radius: 3px;
+  background-color: #000000;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.variable-items-wrapper [data-wvstooltip]:before {
+  min-width: 100px;
+  content: attr(data-wvstooltip);
+}
+
+.variable-items-wrapper .wvs-has-image-tooltip:before {
+  content: " ";
+  background-image: var(--tooltip-background);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-size: cover;
+  border: 2px solid;
+  background-position: center center;
+}
+
+.variable-items-wrapper [data-wvstooltip]:after,
+.variable-items-wrapper .wvs-has-image-tooltip:after {
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000000;
+  border-top: 5px solid rgba(51, 51, 51, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+.variable-items-wrapper [data-wvstooltip]:hover:before,
+.variable-items-wrapper [data-wvstooltip]:hover:after,
+.variable-items-wrapper .wvs-has-image-tooltip:hover:before,
+.variable-items-wrapper .wvs-has-image-tooltip:hover:after {
+  bottom: 120%;
+  visibility: visible;
+  opacity: 1;
+}
