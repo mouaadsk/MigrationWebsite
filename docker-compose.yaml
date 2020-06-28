@@ -1,10 +1,22 @@
 version: '3'
 services:
-  wp:
-    build: .
-    ports:
-      - "8000:80"
   mysql:
-    image: "mysql:latest"
+    image: mysql:latest
     environment:
+      MYSQL_USER: root
       MYSQL_ROOT_PASSWORD: 123456
+    restart : always
+  wp:
+    image : wordpress:latest
+    depends_on: 
+      - mysql
+    build: ./artisanat
+    ports:
+      - 8000:80
+      - 443:443
+    environment:
+      WORDPRESS_DB_PASSWORD: 123456
+      WORDPRESS_DB_USER: root
+    restart: always 
+volumes:
+  my-datavolume:
